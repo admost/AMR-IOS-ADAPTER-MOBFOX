@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <UIKit/UIKit.h>
 
-
-@interface LocationServicesManager : NSObject <CLLocationManagerDelegate, UIAlertViewDelegate>
+@interface MFLocationServicesManager : NSObject <CLLocationManagerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
