@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AMRAdapterMobfox'
-  s.version          = '4.2.2.2'
+  s.version          = '4.2.2.3'
   s.license          = { :type => 'Copyright', :text => <<-LICENSE
 														Copyright 2016
 														Admost Mediation Limited.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.documentation_url = 'https://admost.github.io/amrios/'
   s.platform 			= :ios
   s.ios.deployment_target = '9.0'
-  s.vendored_libraries = 'AMRAdapterMobfox/Libs/libAMRAdapterMobfox.a'
+  s.vendored_frameworks = 'AMRAdapterMobfox/Libs/AMRAdapterMobfox.xcframework'
   s.dependency 'MFXSDK_Native', '4.2.2'
-  s.dependency 'AMRSDK', '~> 1.5.0'
+  s.dependency 'AMRSDK', '~> 1.5.6'
 end
