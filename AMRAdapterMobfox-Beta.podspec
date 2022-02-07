@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'AMRAdapterMobfox'
+  s.name             = 'AMRAdapterMobfox-Beta'
   s.version          = '4.2.2.3'
   s.license          = { :type => 'Copyright', :text => <<-LICENSE
 														Copyright 2016
@@ -18,6 +18,12 @@ Pod::Spec.new do |s|
   s.platform 			= :ios
   s.ios.deployment_target = '9.0'
   s.vendored_frameworks = 'AMRAdapterMobfox/Libs/AMRAdapterMobfox.xcframework'
+  s.pod_target_xcconfig = { 
+    'OTHER_LDFLAGS' => '-ObjC -lc++',
+    "VALID_ARCHS": "arm64 armv7 x86_64",
+    'VALID_ARCHS[sdk=iphoneos*]' => 'armv7 arm64',
+    'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64 arm64'
+  }
   s.dependency 'MFXSDK_Native', '4.2.2'
-  s.dependency 'AMRSDK', '~> 1.5.6'
+  s.dependency 'AMRSDK-Beta', '~> 1.5.6'
 end
